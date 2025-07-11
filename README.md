@@ -1,23 +1,37 @@
-Overview:
-This project implements a GShare Branch Predictor using Verilog HDL. It simulates how modern processors predict the outcome of conditional branches using a combination of the Global History Register (GHR) and Pattern History Table (PHT) indexed through an XOR operation.
+# GShare Branch Predictor in Verilog
 
-Features:
-1.8-bit Global History Register (GHR)
-2.256-entry Pattern History Table (PHT)
-3.2-bit saturating counters for prediction
-4.Indexing using GHR ⊕ PC[7:0]
-5.Testbench for simulation and waveform analysis
-6.Generates waveform .vcd file for GTKWave# Verilog-Based-Branch-Predictor
+## Overview
+This project implements a **GShare Branch Predictor** using **Verilog HDL**. It simulates how modern processors predict the outcome of conditional branches using a combination of the **Global History Register (GHR)** and **Pattern History Table (PHT)** indexed through an XOR operation.
 
-Tools Used:
-1.Verilog HDL
-2.EDA Playground / GTKWave
-3.Synopsys VCS (optional).
+##  Features
+- 8-bit Global History Register (GHR)
+- 256-entry Pattern History Table (PHT)
+- 2-bit saturating counters for prediction
+- Indexing using GHR ⊕ PC[7:0]
+- Testbench for simulation and waveform analysis
+- Generates waveform `.vcd` file for GTKWave
 
-Output:
-1.predict_taken signal evolves based on branch history.
-2.GHR shifts with every resolved branch.
-3.PHT values saturate towards correct prediction over time.
+## Tools Used
+- **Verilog HDL**
+- **EDA Playground / GTKWave**
+- Synopsys VCS (optional).
+
+##  How to Run
+1. Clone the repo or open files in [EDA Playground](https://edaplayground.com).
+2. Load all `.sv` files.
+3. Run the testbench.
+4. Observe waveforms using EPWave viewer.
+
+## Output
+- **predict_taken** signal evolves based on branch history.
+- GHR shifts with every resolved branch.
+- PHT values saturate towards correct prediction over time.
+
+## Acknowledgments
+- RISC-V ISA specifications
+- Berkeley Rocket Core (GShare concepts)
+- Verilog reference documentation
+
 
 
 
